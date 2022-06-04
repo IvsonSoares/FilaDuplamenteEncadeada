@@ -123,9 +123,13 @@ public class Fila<T> {
 
     public void printFila(){
         Node<T> element = this.base;
-        while(element != null){
-            System.out.println(element.dado);
-            element = element.proximo;
+        if(getSize() == 0){
+            System.out.println("Empty List");
+        } else {
+            while(element != null){
+                System.out.println(element.dado);
+                element = element.proximo;
+            }
         }
     }
 }
